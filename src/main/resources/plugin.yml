@@ -1,0 +1,15 @@
+name: InoCore
+version: '${project.version}'
+main: co.yunmc.InoCore
+authors: [ Ino ]
+commands:
+  inocore:
+    description:  插件主命令
+  icore reload:
+    description:  重载
+  icore help:
+    description:  帮助
+  iitem:
+    description:  菜单
+  iitems:
+    description:  a
