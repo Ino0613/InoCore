@@ -11,7 +11,7 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import java.util.*;
+import java.util.List;
 
 
 public class InoItems {
@@ -29,6 +29,10 @@ public class InoItems {
         this.itemData = itemData;
         this.lores = lores;
         this.unbreakable = unbreakable;
+    }
+
+    public InoItems() {
+
     }
 
     public ItemStack createItem(Integer amount, Player p) {
@@ -49,16 +53,16 @@ public class InoItems {
     public ItemStack createItem1() {
         Integer newItemid = Integer.valueOf(this.itemId);
         Integer newItemdata = Integer.valueOf(this.itemData);
-        ItemStack itemStack = new ItemStack(newItemid, newItemdata.shortValue());
-        ItemMeta itemMeta = itemStack.getItemMeta();
+        ItemStack itemStack1 = new ItemStack(newItemid, newItemdata.shortValue());
+        ItemMeta itemMeta1 = itemStack1.getItemMeta();
         String newName = this.name;
         List<String> newlore = config.replaceColorCode(this.lores);
-        itemMeta.setDisplayName((newName).replace("&", "§"));
-        itemMeta.setLore(newlore);
-        itemMeta.setUnbreakable(this.unbreakable);
-        itemMeta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-        itemStack.setItemMeta(itemMeta);
-        return itemStack;
+        itemMeta1.setDisplayName((newName).replace("&", "§"));
+        itemMeta1.setLore(newlore);
+        itemMeta1.setUnbreakable(this.unbreakable);
+        itemMeta1.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        itemStack1.setItemMeta(itemMeta1);
+        return itemStack1;
     }
 
 }
